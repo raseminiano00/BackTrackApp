@@ -1,0 +1,13 @@
+.navbar {
+    height: 3.3rem;
+    div {
+        .action-list {
+            color: white;
+            font-size: 2rem;
+            padding-right: 2rem;
+            i {
+                cursor:pointer
+            }
+        }
+    }
+}

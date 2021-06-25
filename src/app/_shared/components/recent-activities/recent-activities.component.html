@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Date</th>
+            <th scope="col">Spent Hours</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let activity of activities; index as i">
+            <td>
+              {{ activity.description }}
+            </td>
+            <td>{{ activity.date | date:'MMM d,y' }}</td>
+            <td>{{ activity.spentHours }}</td>
+          </tr>
+    </tbody>
+</table>

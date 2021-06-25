@@ -1,0 +1,41 @@
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Add Activity</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="d-flex">
+            <form [formGroup]="todoForm" (ngSubmit)="addTodo()">
+                <div class="todo-list container-fluid">
+                    <div class="form-input-container row">
+                        <div class="form-group col-md-12">
+                            <label for="description">Activitiy</label>
+                            <input class="form-control" type="text" formControlName="description">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="hours">Date</label>
+                            <div class="contain-fluid">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" formControlName="date"
+                                        ngbDatepicker #d="ngbDatepicker">
+                                    </div>
+                                    <div class="col-md-2 mt-1">
+                                        <button class="btn btn-outline-secondary feather-calendar" (click)="d.toggle()"
+                                            type="button"></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="hours">Spent hours</label>
+                            <input class="form-control" type="number" formControlName="hours">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit Activity</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

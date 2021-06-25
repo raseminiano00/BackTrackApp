@@ -1,0 +1,5 @@
+<div style="display: block">
+  <h6 class="card-subtitle mb-2 text-muted">Week {{currentWeekOfMonth()}} of {{currentDate | date:'MMMM  y'}}</h6>
+  <canvas baseChart [data]="activitiesData" [labels]="activitiesLabel" [chartType]="chartType">
+  </canvas>
+</div>
